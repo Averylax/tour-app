@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/styles.css";
 
 const TourCard = ({ id, name, info, image, price, onRemove }) => {
     const [readMore, setReadMore] = useState(false);

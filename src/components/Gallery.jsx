@@ -7,9 +7,11 @@ const Gallery = ({ tours, loading, error, onRemoveTour, onRefresh }) => {
   }
 
   if (error) {
+    console.error("Server Error:", error); // Log the error for debugging
     return (
       <div className="error">
         <h2>Something went wrong...</h2>
+        <p>{error.message || "Please try again later."}</p>
         <button onClick={onRefresh}>Try Again</button>
       </div>
     );
@@ -27,12 +29,10 @@ const Gallery = ({ tours, loading, error, onRemoveTour, onRefresh }) => {
   return (
     <section className="gallery">
       {tours.map((tour) => (
-        <TourCard key={tour.id} tour={tour} onRemoveTour={onRemoveTour} />
+        <TourCard key={tour.id} {...tour} onRemove={onRemoveTour} />
       ))}
     </section>
   );
 };
 
 export default Gallery;
-
-

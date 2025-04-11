@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Gallery from '.componets/Gallery';
+import Gallery from './components/Gallery';
 
 const App = () => {
   const [tours, setTours] = useState([]);
@@ -8,7 +8,7 @@ const App = () => {
 
   const fetchTours = async () => {
     try {
-      const res = await fetch("http://course-api.com/react-tours-project");
+      const res = await fetch("/react-tours-project", { mode: 'no-cors' });
       const data = await res.json();
 
       setTours(data);
