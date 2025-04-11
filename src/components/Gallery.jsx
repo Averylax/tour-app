@@ -35,3 +35,4 @@ const Gallery = ({ tours, loading, error, onRemoveTour, onRefresh }) => {
 
 export default Gallery;
 
+
