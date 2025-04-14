@@ -14,7 +14,7 @@ const TourCard = ({ id, name, info, image, price, onRemove }) => {
                 </div>
                 <p>
                     {info 
-                    ? readMore ? info : `${info.substring(0, 200)}...`
+                    ? (readMore ? info : `${info.substring(0, 200)}...`)
                     :"No description available"}
                 </p>
                 <button onClick={() => onRemove(id)} className="remove-btn" >
