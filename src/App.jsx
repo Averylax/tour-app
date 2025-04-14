@@ -4,7 +4,7 @@ import Gallery from './components/Gallery';
 const App = () => {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchTours = async () => {
     try {
