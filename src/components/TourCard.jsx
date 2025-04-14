@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "../styles/styles.css";
+import React, { useState } from "react"; // Importing React and useState hook
+import "../styles/styles.css"; // Importing CSS styles
 
-const TourCard = ({ id, name, info, image, price, onRemove }) => {
-    const [readMore, setReadMore] = useState(false);
+const TourCard = ({ id, name, info, image, price, onRemove }) => { // TourCard component to display individual tour details
+    const [readMore, setReadMore] = useState(false); // State to manage read more functionality
 
-    return (
-        <article className="tour-card">
+    return ( // JSX to render the tour card
+        <article className="tour-card"> 
             <img src={image} alt={name} />
             <div className="tour-info">
                 <div className="tour-header">
