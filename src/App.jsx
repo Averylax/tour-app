@@ -8,14 +8,14 @@ const App = () => {
 
   const fetchTours = async () => {
     try {
-      const res = await fetch("/react-tours-project", { mode: 'no-cors' });
+      const res = await fetch("https://course-api.com/react-tours-project");
       const data = await res.json();
 
       setTours(data);
       setLoading(false);
     } catch (error) {
       console.error(error);
-      setError(true);
+      setError(error);
       setLoading(false);
     }
   };

@@ -13,7 +13,7 @@ const TourCard = ({ id, name, info, image, price, onRemove }) => {
                     <span className="tour-price">${price}</span>
                 </div>
                 <p>
-                    {readMore ? info : `${info.substring(0, 200)}...`}
+                    {info ? readMore ? info : `${info.substring(0, 200)}...` :"No description available"}
                     <button onClick={() => setReadMore(!readMore)}>
                         {readMore ? "Show Less" : "Read More"}
                     </button>
